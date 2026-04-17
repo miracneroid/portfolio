@@ -7,6 +7,13 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 
 const workProjects = [
   {
+    title: "Adsync AI",
+    description: "Automating and optimizing ad campaigns with AI.",
+    tech: ["Next.js", "TypeScript", "Python(ML)", "Supabase", "Microservice", "LLM", "Gorq", "Gemini", "Open AI"],
+    imageUrl: "https://api.vercel.app/v1/og?url=https://adsyncai.netlify.app",
+    href: "https://adsyncai.netlify.app",
+  },
+  {
     title: "Rareware",
     description: "Developing scalable web platforms for businesses.",
     tech: ["React", "Node.js", "PostgreSQL", "Stripe API", "Redis"],
@@ -14,19 +21,65 @@ const workProjects = [
     href: "https://vedantja.in/work/transactions",
   },
   {
-    title: "Paystream",
-    description: "Improving payment infrastructure for fintech platforms.",
-    tech: ["Next.js", "TypeScript", "Prisma", "AWS", "WebSockets"],
-    imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fspotify.9a23ae99.png&w=3840&q=75",
-    href: "https://vedantja.in/project/spotify",
-    isIcon: true,
-  },
-  {
-    title: "Puzzle RDP",
+    title: "1RDP",
     description: "Optimizing infrastructure for remote desktop platforms.",
     tech: ["React", "Go", "PostgreSQL", "Docker", "CloudFront"],
     imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fqr-mock.d0404493.webp&w=3840&q=75",
-    href: "https://vedantja.in/work/qr",
+    href: "https://1rdp.netlify.app",
+  },
+  {
+    title: "Paysettle",
+    description: "Improving payment infrastructure for fintech platforms.",
+    tech: ["Next.js", "TypeScript", "Prisma", "AWS", "WebSockets"],
+    imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fspotify.9a23ae99.png&w=3840&q=75",
+    href: "https://paysettle.netlify.app",
+    isIcon: true,
+  },
+  {
+    title: "Warehouse OS",
+    description: "Streamlining real-time inventory operations for logistics.",
+    tech: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind"],
+    imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fjunta-mock.bef5bcc1.webp&w=3840&q=75",
+    href: "https://vedantja.in/writing/junta-quirks",
+  },
+  {
+    title: "LearnTrack",
+    description: "Scaling edtech platforms for seamless learning experiences.",
+    tech: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind"],
+    imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fupi-lite-mock.c37ff331.webp&w=3840&q=75",
+    href: "https://vedantja.in/work/upi-lite",
+  },
+  {
+    title: "ClientHub CRM",
+    description: "Centralizing client workflows for better team efficiency.",
+    tech: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind"],
+    imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fupi-lite-mock.c37ff331.webp&w=3840&q=75",
+    href: "https://vedantja.in/work/upi-lite",
+  },
+];
+
+const playBlogs = [
+  {
+    title: "Rareware",
+    description: "Developing scalable web platforms for businesses.",
+    tech: ["React", "Node.js", "PostgreSQL", "Stripe API", "Redis"],
+    imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftransactions-mock.a80cdb3e.webp&w=3840&q=75",
+    href: "https://vedantja.in/work/transactions",
+  },
+  {
+    title: "Paysettle",
+    description: "Improving payment infrastructure for fintech platforms.",
+    tech: ["Next.js", "TypeScript", "Prisma", "AWS", "WebSockets"],
+    imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fspotify.9a23ae99.png&w=3840&q=75",
+    href: "https://paysettle.netlify.app",
+    isIcon: true,
+  },
+  {
+    title: "1RDP",
+    description: "Optimizing infrastructure for remote desktop platforms.",
+    tech: ["React", "Go", "PostgreSQL", "Docker", "CloudFront"],
+    imageUrl: "https://vedantja.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fqr-mock.d0404493.webp&w=3840&q=75",
+    href: "https://1rdp.netlify.app",
   },
   {
     title: "Warehouse OS",
@@ -212,14 +265,14 @@ const Index = () => {
             years="2025 - Now"
             title="Full Stack Developer"
             linkText="RareWare"
-            linkHref="https://rarewareshop.com/"
+            linkHref="https://rareware.netlify.app"
             description="Building end-to-end web products for growing businesses."
           />
           <ExperienceItem
             years="2024 - 2025"
             title="Full Stack Developer"
-            linkText="Puzzle RDP"
-            linkHref="https://eduskillsfoundation.org/"
+            linkText="1RDP"
+            linkHref="https://1rdp.netlify.app/"
             description="Developed cloud infrastructure for high-traffic systems."
           />
           <ExperienceItem
@@ -295,9 +348,12 @@ const Index = () => {
                 <ProjectCard {...project} />
               </div>
             ))}
-          {activeTab === "play" && (
-            <p className="text-neutral-400">Play projects coming soon.</p>
-          )}
+          {activeTab === "play" &&
+            playBlogs.map((project) => (
+              <div key={project.title} style={{ opacity: 1, transform: "none" }}>
+                <ProjectCard {...project} />
+              </div>
+            ))}
         </div>
       </div>
 
