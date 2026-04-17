@@ -10,7 +10,7 @@ const workProjects = [
     title: "Adsync AI",
     description: "Automating and optimizing ad campaigns with AI.",
     tech: ["Next.js", "TypeScript", "Python(ML)", "Supabase", "Microservice", "LLM", "Gorq", "Gemini", "Open AI"],
-    imageUrl: "https://api.vercel.app/v1/og?url=https://adsyncai.netlify.app",
+    imageUrl: "public/images/adsyncai.png",
     href: "https://adsyncai.netlify.app",
   },
   {
