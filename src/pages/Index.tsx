@@ -262,15 +262,15 @@ const Index = () => {
         {/* Experience */}
         <div className="flex flex-col gap-3">
           <ExperienceItem
-            years="2025 - Now"
+            years="Apr - Sept 2025"
             title="Full Stack Developer"
             linkText="RareWare"
             linkHref="https://rareware.netlify.app"
             description="Building end-to-end web products for growing businesses."
           />
           <ExperienceItem
-            years="2024 - 2025"
-            title="Full Stack Developer"
+            years="Aug - Nov 2024"
+            title="DevOps Engineer"
             linkText="1RDP"
             linkHref="https://1rdp.netlify.app/"
             description="Developed cloud infrastructure for high-traffic systems."
